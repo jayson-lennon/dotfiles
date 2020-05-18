@@ -1,0 +1,8 @@
+alias rg="rg -i" 
+alias ls="exa"
+alias cat="bat"
+alias find="fd"
+alias gitlog="git log --graph --decorate --oneline --all"
+alias gitstash="git stash -u"
+alias alarm="termdown -s -t \"BREAK\" -b"
+alias tmux="tmux -2"

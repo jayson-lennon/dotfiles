@@ -1,0 +1,7 @@
+#!/bin/sh
+
+[ -z "$1" ] && echo "Volume level required" && exit 1
+
+SOURCE_INDEX=$(pacmd list-sources|'grep' -B1 'echo-cancel>' | sed '2d' | awk '{print $2}')
+
+pacmd set-source-volume $SOURCE_INDEX $1

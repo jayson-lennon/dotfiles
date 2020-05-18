@@ -1,0 +1,7 @@
+% audio,microphone,pulse,recording
+
+# Unload echo-cancel / noise cancelation module
+pactl unload-module module-echo-cancel
+
+# Load echo-cancel / noise cancelation module
+pactl load-module module-echo-cancel aec_method=webrtc

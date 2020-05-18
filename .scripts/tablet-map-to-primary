@@ -1,0 +1,13 @@
+#!/bin/sh
+
+echo Mapping tablet to eDP-1
+for device in `xinput | map-tablet.py`; do
+    xinput map-to-output $device eDP-1 2>/dev/null;
+done
+
+# krita - undo
+#xsetwacom set "HID 256c:006e Pen pen" Button 10 "key ctrl z"
+# krita - redo
+#xsetwacom set "HID 256c:006e Pad" Button 9 "key ctrl shift z"
+# krita - open brush selector
+#xsetwacom set "HID 256c:006e Pen pen" Button 3 "key ctrl shift p"
