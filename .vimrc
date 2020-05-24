@@ -25,14 +25,15 @@ set ttimeoutlen=0       " immediate input after hitting escape
 set hidden              " Keep files open even if not in a window.
 set number              " Show absolute line number @ cursor
 set relativenumber      " Show relative line numbers
-set noerrorbells
-set showcmd
+set cursorline          " highlight current line
+set showcmd             " show keystrokes / commands in status bar
 syntax enable
 set encoding=utf-8
 set ffs=unix,dos,mac    " Default line endings + autodetect
 set history=200
-set ruler
+set ruler               " show line and column numbers
 set belloff=all
+set noerrorbells
 "set colorcolumn=100
 "match ColorColumn "\%>99v.\+"   " Highlight column 100+
 
