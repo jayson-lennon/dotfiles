@@ -25,9 +25,6 @@ export PATH=$PATH:$HOME/.gem/ruby/2.5.0/bin
 # Python
 export PATH=$PATH:$HOME/.local/bin
 
-# Yarn
-export PATH=$PATH:$HOME/.yarn/bin
-
 # .NET
 export PATH=$PATH:$HOME/.dotnet/tools
 
@@ -47,6 +44,10 @@ export PATH=$PATH:$HOME/.scripts
 
 # Custom binaries
 export PATH=$PATH:$HOME/.bin
+
+# Web dev
+export NPM_CONFIG_PREFIX=$HOME/.npmglobal
+export PATH=$PATH:$NPM_CONFIG_PREFIX/bin
 
 # Custom cheats
 export NAVI_PATH=$HOME/.cheats/
