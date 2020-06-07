@@ -3,24 +3,17 @@ autoload -U zmv
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=10000
+SAVEHIST=10000
 setopt appendhistory autocd extendedglob nomatch notify
 unsetopt beep
 # Shift+tab
 bindkey '^[[Z' reverse-menu-complete
 
-export VISUAL=vim
-autoload edit-command-line; zle -N edit-command-line
-bindkey -M vicmd v edit-command-line
-# End of lines configured by zsh-newuser-install
-
-# The following lines were added by compinstall
 zstyle :compinstall filename '/home/jayson/.zshrc'
 
 autoload -Uz compinit
 compinit
-# End of lines added by compinstall
 
 source ~/.profile
 source /usr/share/zsh/share/antigen.zsh
@@ -53,6 +46,8 @@ antigen apply
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#7a7a7a"
 
+set KEYTIMEOUT=1
+
 # 'z' tool
 set _Z_DATA=/home/jayson/data/sys/appdata/z
 [[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
@@ -70,3 +65,17 @@ source ~/.aliases
 source /home/jayson/.config/broot/launcher/bash/br
 source <(navi widget zsh)
 
+# Set cursor depending on mode
+function zle-keymap-select zle-line-init zle-line-finish {
+  case $KEYMAP in
+    vicmd)      print -n -- "\E]50;CursorShape=2\C-G";; # underline
+    viins|main) print -n -- "\E]50;CursorShape=0\C-G";; # block
+  esac
+
+  zle reset-prompt
+  zle -R
+}
+
+zle -N zle-line-init
+zle -N zle-line-finish
+zle -N zle-keymap-select
