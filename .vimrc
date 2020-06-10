@@ -115,7 +115,7 @@ endif
 " Set tab size for webdev
 :augroup webDevSettings
 :  autocmd!
-:  autocmd BufRead,BufNewFile *.html,*.vue,*.js,*.css,*.scss,*.pug,*.purs,*.ts set shiftwidth=2 softtabstop=2 expandtab
+:  autocmd BufRead,BufNewFile *.html,*.vue,*.js,*.css,*.scss,*.pug,*.purs,*.ts,*.yml,*.yaml set shiftwidth=2 softtabstop=2 expandtab
 :  autocmd BufRead,BufNewFile *.vue :set syntax=html
 :  autocmd BufNewFile,BufRead *.html.tera set syntax=html shiftwidth=2 softtabstop=2 expandtab
 :augroup END
