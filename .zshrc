@@ -3,8 +3,8 @@ autoload -U zmv
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=50000
+SAVEHIST=50000
 setopt appendhistory autocd extendedglob nomatch notify
 unsetopt beep
 # Shift+tab

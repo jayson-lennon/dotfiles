@@ -51,3 +51,7 @@ export PATH=$PATH:$NPM_CONFIG_PREFIX/bin
 
 # Custom cheats
 export NAVI_PATH=$HOME/.cheats/
+
+# Cloud
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
