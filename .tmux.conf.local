@@ -307,5 +307,3 @@ unbind Down
 unbind Left
 unbind Right
 
-run-shell ~/data/sys/tmux-resurrect/resurrect.tmux
-
