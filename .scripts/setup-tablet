@@ -1,0 +1,18 @@
+#!/bin/sh
+
+echo Mapping tablet to eDP-1
+for device in `xinput | map-tablet.py`; do
+    xinput map-to-output $device DP-1 2>/dev/null;
+done
+
+# Mouse mark mode
+echo Enable mark mode
+xsetwacom set "HID 256c:006e Pen stylus" Button 1 "key +shift +super"
+
+# Undo marks
+echo Set mark undo to bottom button
+xsetwacom set "HID 256c:006e Pad pad" Button 10 "key +shift +super f12 -shift -super"
+
+# Clear marks
+echo Set mark clear to top button
+xsetwacom set "HID 256c:006e Pad pad" Button 1 "key +shift +super f11 -shift -super"
