@@ -19,8 +19,8 @@ export PATH=$PATH:$HOME/.gem/ruby/2.4.0/bin
 export PATH=$PATH:$HOME/.gem/ruby/2.5.0/bin
 
 # Go
-#export GOPATH=$HOME/dev/go
-#export PATH=$PATH:$(go env GOPATH)/bin
+export GOPATH=$HOME/.go
+export PATH=$PATH:$(go env GOPATH)/bin
 
 # Python
 export PATH=$PATH:$HOME/.local/bin
