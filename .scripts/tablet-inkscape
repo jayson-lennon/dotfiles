@@ -1,0 +1,18 @@
+#!/bin/sh
+
+echo Mapping tablet to eDP-1
+for device in `xinput | map-tablet.py`; do
+    xinput map-to-output $device DP-1 2>/dev/null;
+done
+
+# Undo
+echo Set bottom button: undo
+xsetwacom set "HID 256c:006e Pad pad" Button 10 "key +ctrl z -ctrl"
+
+# Undo
+echo Set 2nd from bottom button: clear all
+xsetwacom set "HID 256c:006e Pad pad" Button 9 "key +ctrl a -ctrl del"
+
+# Clear marks
+echo Set mark clear to top button
+xsetwacom set "HID 256c:006e Pad pad" Button 1 "key +shift +super f11 -shift -super"
