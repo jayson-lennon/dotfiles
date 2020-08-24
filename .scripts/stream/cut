@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+python ~/data/dev/projects/obsctrl/stop-recording.py
+python ~/data/dev/projects/obsctrl/start-recording.py
