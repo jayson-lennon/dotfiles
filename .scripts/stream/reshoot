@@ -1,5 +1,5 @@
 #!/usr/bin/nu
-python ~/data/dev/projects/obsctrl/stop-recording.py
+python ~/.scripts/stream/src/stop-recording.py
 cd ~/data/projects/learn-with-rust/video/recordings
 rm $(ls | sort-by modified | reverse | first | format '{name}')
-python ~/data/dev/projects/obsctrl/start-recording.py
+python ~/.scripts/stream/src/start-recording.py

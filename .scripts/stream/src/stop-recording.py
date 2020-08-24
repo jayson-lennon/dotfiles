@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import asyncio
 import simpleobsws
+import time
 
 loop = asyncio.get_event_loop()
 ws = simpleobsws.obsws(host='127.0.0.1', port=4444) # Every possible argument has been passed, but none are required. See lib code for defaults.
