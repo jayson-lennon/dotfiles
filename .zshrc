@@ -48,10 +48,6 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#7a7a7a"
 
 set KEYTIMEOUT=1
 
-# 'z' tool
-set _Z_DATA=/home/jayson/data/sys/appdata/z
-[[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
-
 # fzf
 source /usr/share/fzf/key-bindings.zsh
 rga-fzf() {
@@ -67,6 +63,9 @@ rga-fzf() {
 	echo "opening $file" &&
 	xdg-open "$file"
 }
+
+# zoxide directory jumper
+eval "$(zoxide init zsh)"
 
 # Prompt
 eval "$(starship init zsh)"
