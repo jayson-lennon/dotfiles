@@ -2,6 +2,9 @@
 
 jack_control start
 
+pactl set-default-sink jack_out
+pactl set-default-source jack_in
+
 CARLA=$(ps -AF|awk '/carla\/carla/ {print $2}')
 if [ -z $OBS ]
   then
@@ -21,8 +24,5 @@ setup-tablet
 
 jack_disconnect 'system:capture_1' 'PulseAudio JACK Source:front-left'
 jack_disconnect 'system:capture_2' 'PulseAudio JACK Source:front-right'
-
-pactl set-default-source jack_in
-pactl set-default-sink jack_out
 
 cd ~/data/projects/config && obs-scene-switcher
