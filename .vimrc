@@ -131,6 +131,12 @@ endif
 :  autocmd BufLeave,FocusLost,InsertEnter * set norelativenumber
 :augroup END
 
+" Scripting
+:augroup shellScriptSettings
+:  autocmd!
+:  autocmd BufRead,BufNewFile *.sh set shiftwidth=2 softtabstop=2 expandtab
+:augroup END
+
 " Rust stuff
 let g:rustc_path = "/usr/bin/rustc"
 let g:rust_fold = 1
